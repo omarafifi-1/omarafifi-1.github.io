@@ -1,0 +1,47 @@
+:root {
+    --bs-primary: 80, 46, 37;
+    --bs-secondary: 108, 117, 125;
+    --bs-success: 25, 135, 84;
+    --bs-info: 0, 160, 180;
+    --bs-warning: 255, 193, 7;
+    --bs-danger: 220, 53, 69;
+    --bs-light: 248, 249, 250;
+    --bs-dark: 33, 37, 41;
+}
+
+.navbar {
+    background-color: rgba(var(--bs-dark), 0);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(var(--bs-dark), 1);
+}
+
+.hero {
+    background: url('../images/HeroBackground.jpeg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(var(--bs-dark));
+    opacity: 0.6;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: rgb(var(--bs-primary));
+    border-color: #1c2021;
+}
+
+.btn-primary:hover {
+    background-color: #683d29;
+    border-color: #1c2021;
+}
