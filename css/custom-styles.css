@@ -1,12 +1,14 @@
 :root {
     --bs-primary: 80, 46, 37;
-    --bs-secondary: 108, 117, 125;
+    --bs-secondary: 131, 96, 80;
     --bs-success: 25, 135, 84;
-    --bs-info: 0, 160, 180;
+    --bs-info: 104, 61, 41;
     --bs-warning: 255, 193, 7;
     --bs-danger: 220, 53, 69;
     --bs-light: 248, 249, 250;
     --bs-dark: 33, 37, 41;
+    --bs-background: 79, 54, 58;
+    --bs-background-alt: 90, 69, 73;
 }
 
 .navbar {
@@ -15,7 +17,7 @@
 }
 
 .navbar.scrolled {
-    background-color: rgba(var(--bs-dark), 1);
+    background-color: rgba(var(--bs-primary), 1);
 }
 
 .hero {
@@ -38,10 +40,31 @@
 
 .btn-primary {
     background-color: rgb(var(--bs-primary));
-    border-color: #1c2021;
+    border-color: rgb(var(--bs-info));
 }
 
 .btn-primary:hover {
-    background-color: #683d29;
-    border-color: #1c2021;
+    background-color: rgb(var(--bs-info));
+    border-color: rgb(var(--bs-info));
+}
+
+.bg-primary {
+    background-color: rgb(var(--bs-background)) !important;
+}
+
+.border-info {
+    border-color: rgb(var(--bs-info)) !important;
+}
+
+.bg-info {
+    background-color: rgb(var(--bs-background-alt)) !important;
+}
+
+.hover-scale {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
 }
