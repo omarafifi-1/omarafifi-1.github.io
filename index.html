@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Afifi | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&family=Nunito:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom-styles.css">
 
@@ -12,25 +14,33 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="70" tabindex="0">
 
-    <!-- Navbar -->
+    <!-- Navbar With Pills-->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar-example">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand position-relative me-5" href="#">
                 <img src="images/PortfolioIcon.png" alt="Logo" width="30" height="26"
                     class="d-inline-block align-text-top">
-                My Portfolio
+                My Portfolio <span class="badge text-bg-secondary position-absolute top-0 start-100 translate-middle-y">Updated</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="#Home">Home</a>
-                    <a class="nav-link" href="#About">About</a>
-                    <a class="nav-link" href="#Skills">Skills</a>
-                    <a class="nav-link" href="#Projects">Projects</a>
-                </div>
+                <ul class="navbar-nav ms-auto nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Projects">Projects</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -51,6 +61,7 @@
         id="About">
         <h2 class="display-4 fw-bold text-center mb-5 mt-3">About Me</h2>
         <div class="container">
+            <!-- My Picture And Summary -->
             <div class="row justify-content-center align-items-stretch g-5">
                 <div class="col-md-5 col-sm-10 h-100">
                     <div class="card shadow-sm hover-scale">
@@ -58,9 +69,9 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-10">
-                    <div class="card h-100  rounded bg-info shadow-sm hover-scale">
+                    <div class="card h-100  rounded-3 bg-info shadow-lg hover-scale border-1">
                         <div class="card-body d-flex align-items-center justify-content-center">
-                            <p class="lead mb-0">
+                            <p class="card-text fs-5">
                                 I am a passionate and resourceful software engineer with a solid understanding of
                                 software development principles, looking to apply my abilities in a demanding position,
                                 seize new opportunities, and contribute to great projects.
@@ -69,29 +80,205 @@
                     </div>
                 </div>
             </div>
-            <form class="needs-validation" novalidate>
-                <p class="lead text-start mt-3">Connect With me</p>
-                <div class="mt-3 text-start">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        required>
-                    <div class="invalid-feedback">
-                        <div class="alert alert-danger" role="alert">
-                            Please enter a valid email address.
+            <!-- Contact Form Accordion -->
+            <div class="accordion my-5" id="contactAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingForm">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
+                            Connect With Me
+                        </button>
+                    </h2>
+                    <div id="collapseForm" class="accordion-collapse collapse" aria-labelledby="headingForm"
+                        data-bs-parent="#contactAccordion">
+                        <div class="accordion-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="mt-3 text-start">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control bg-light text-black" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" required>
+                                    <div class="invalid-feedback">
+                                        <div class="alert alert-danger" role="alert">
+                                            Please enter a valid email address.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control bg-light text-black" id="message" rows="5"
+                                        required></textarea>
+                                    <div class="invalid-feedback">
+                                        <div class="alert alert-danger" role="alert">
+                                            Please enter your message.
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-secondary">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="mb-3 text-start">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                    <div class="invalid-feedback">
-                        <div class="alert alert-danger" role="alert">
-                            Please enter your message.
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="Skills"
+        class="py-5 d-flex flex-column justify-content-center align-items-center bg-gradient bg-dark min-vh-100">
+        <div class="container">
+            <h2 class="display-4 fw-bold text-center mb-3">My Skills</h2>
+            <div class="row justify-content-center gx-4 gy-4">
+
+                <!-- Programming Card -->
+                <div class="col-md-6 col-lg-6 my-5">
+                    <div class="card h-100 shadow-sm hover-scale bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Programming Languages</h5>
+                            <div class="mb-2">
+                                <label class="form-label">C#</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">C/C++</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"
+                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Python</label>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">HTML</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">CSS</label>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">JavaScript</label>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100">75%</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button type="Submit" class="btn btn-primary">Submit</button>
-            </form>
+
+                <!-- Frameworks Card -->
+                <div class="col-md-6 col-lg-6 my-5">
+                    <div class="card h-100 shadow-sm hover-scale bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Frameworks</h5>
+                            <div class="mb-2">
+                                <label class="form-label">Bootstrap</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <label class="form-label d-flex align-items-center">Angular (Currently Learning)<div
+                                        class="mx-2 spinner-border" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div> </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%;"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <label class="form-label d-flex align-items-center">.Net (Currently Learning)<div
+                                        class="mx-2 spinner-border" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div> </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%;"
+                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Card -->
+                <div class="col-md-6 col-lg-6 my-2">
+                    <div class="card h-100 shadow-sm hover-scale bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Tools</h5>
+                            <div class="mb-2">
+                                <label class="form-label">Git/Github</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"
+                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">VS Code</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"
+                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Visual Studio</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"
+                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <label class="form-label d-flex align-items-center">Docker (Currently Learning)<div
+                                        class="mx-2 spinner-border" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div> </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%;"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases Card -->
+                <div class="col-md-6 col-lg-6 my-2">
+                    <div class="card h-100 shadow-sm hover-scale bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Databases</h5>
+                            <div class="mb-2">
+                                <label class="form-label">SQL Server (T-SQL)</label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"
+                                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">MySQL</label>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;"
+                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
