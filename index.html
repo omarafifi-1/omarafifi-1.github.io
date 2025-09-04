@@ -20,7 +20,8 @@
             <a class="navbar-brand position-relative me-5" href="#">
                 <img src="images/PortfolioIcon.png" alt="Logo" width="30" height="26"
                     class="d-inline-block align-text-top">
-                My Portfolio <span class="badge text-bg-secondary position-absolute top-0 start-100 translate-middle-y">Updated</span>
+                My Portfolio <span
+                    class="badge text-bg-secondary position-absolute top-0 start-100 translate-middle-y">Updated</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +50,7 @@
     <section class="hero d-flex flex-column justify-content-center align-items-center text-center min-vh-100" id="Home">
         <div class="container">
             <h1 class="display-4 fw-bold">Hi, I’m Omar Afifi</h1>
-            <p class="lead text-muted">Software Engineer | Full-Stack Developer</p>
+            <p class="lead text-muted">Software Engineer</p>
             <a href="files/OmarAfifi-SoftwareEngineer.pdf" target="_blank" class="btn btn-primary btn-lg mt-3">View My
                 Resume</a>
         </div>
@@ -80,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Contact Form Accordion -->
+            <!-- Contact Form With Accordion -->
             <div class="accordion my-5" id="contactAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingForm">
@@ -172,8 +173,8 @@
                             <div class="mb-2">
                                 <label class="form-label">JavaScript</label>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                                        aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                        aria-valuemin="0" aria-valuemax="100">85%</div>
                                 </div>
                             </div>
                         </div>
@@ -271,10 +272,10 @@
                             <div class="mb-2">
                                 <label class="form-label">MySQL</label>
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 80%;"
-                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100">80%</div>
                                 </div>
-                            </div>   
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -282,9 +283,60 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="Projects" class="d-flex flex-column justify-content-center align-items-center text-center bg-primary bg-gradient min-vh-100">
+        <div class="container">
+            <h2 class="display-4 fw-bold text-center mb-5">My Projects</h2>
+            <div id="projectPages">
+                <!-- Page 1 -->
+                <div class="row project-page active">
+                    <div class="col-md-12 mb-4">
+                        <div class="card h-100 shadow-sm hover-scale">
+                            <img src="images/Project1.png" class="card-img-top img-fluid rounded-2" style="width: 200rem;" alt="Project 1">
+                            <div class="card-body bg-info">
+                                <h5 class="card-title">Self-driving car and Advanced Driver Assistance Systems (ADAS)</h5>
+                                <p class="card-text">Developed a full library from scratch for each of these sensors targeted for ARM Bluepill and tested most of them on a real prototype with success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page 2 -->
+                <div class="row project-page d-none">
+                    <div class="col-md-12 mb-4">
+                        <div class="card h-100 shadow-sm hover-scale">
+                            <img src="images/Project2.jpg" class="card-img-top img-fluid rounded-2" style="width: 200rem;" alt="Project 2">
+                            <div class="card-body bg-info">
+                                <h5 class="card-title">IC Tester</h5>
+                                <p class="card-text">Made an Integrated Circuit (IC) tester both software and hardware that can test various ICs and provide their name and code.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page 3 -->
+                <div class="row project-page d-none">
+                    <div class="col-md-12 mb-4">
+                        <div class="card h-100 shadow-sm hover-scale">
+                            <img src="images/Project3.png" class="card-img-top img-fluid rounded-2" style="width: 200rem;" alt="Project 3">
+                            <div class="card-body bg-info">
+                                <h5 class="card-title">Simple To-do Manager</h5>
+                                <p class="card-text">Developed a simple to-do manager application using HTML, CSS, and JavaScript. Implemented features like adding, editing, and deleting tasks, as well as saving tasks to local storage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <nav>
+                <ul class="pagination justify-content-center mt-4">
+                    <li class="page-item active"><a class="page-link" href="#" data-page="0">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="1">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="2">3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom-scripts.js"></script>
 </body>
-
 </html>

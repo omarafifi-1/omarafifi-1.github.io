@@ -108,3 +108,18 @@ body, p {
     background-color: rgb(var(--bs-background)) !important;
     color: #fff;
 }
+
+.pagination {
+    --bs-pagination-color: #fff;
+    --bs-pagination-bg: rgb(var(--bs-background-alt));
+    --bs-pagination-border-color: rgb(var(--bs-background-alt));
+    --bs-pagination-hover-color: #fff;
+    --bs-pagination-hover-bg: rgb(var(--bs-primary));
+    --bs-pagination-hover-border-color: rgb(var(--bs-primary));
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: rgb(var(--bs-primary));
+    --bs-pagination-active-border-color: rgb(var(--bs-primary));
+}
+.pagination .page-link {
+    box-shadow: none;
+}
