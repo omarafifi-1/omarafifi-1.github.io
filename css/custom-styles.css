@@ -123,3 +123,45 @@ body, p {
 .pagination .page-link {
     box-shadow: none;
 }
+
+#About,
+#Skills,
+#Projects {
+    position: relative;
+    background-image: url('../images/SectionsBG.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: #e0e0e0;        
+    padding: 80px 20px;
+}
+
+/* Overlay to darken image and improve text readability */
+#About::before,
+#Skills::before,
+#Projects::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.45); /* adjust opacity to taste */
+    z-index: -1;
+}
+
+/* Optional: make cards inside slightly lighter for contrast */
+#About .card,
+#Skills .card,
+#Projects .card {
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+    color: #f0f0f0;
+    border: none;
+}
+
+/* Optional: mobile fallback for fixed background (better performance) */
+@media (max-width: 768px) {
+    #About,
+    #Skills,
+    #Projects {
+        background-attachment: scroll;
+    }
+}
