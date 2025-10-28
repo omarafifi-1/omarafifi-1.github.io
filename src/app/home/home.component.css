@@ -1,0 +1,17 @@
+.hero {
+    background: url('/assets/HeroBackground.jpeg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(var(--bs-dark-rgb));
+    opacity: 0.6;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,26 @@
+#contactAccordion {
+    --bs-accordion-bg: rgb(var(--bs-primary-rgb));        
+    --bs-accordion-btn-bg: rgb(var(--bs-primary-rgb));
+    --bs-accordion-btn-color: #fff;
+    --bs-accordion-border-color: rgba(var(--bs-primary-rgb), 0.5);
+    
+}
+#contactAccordion .accordion-button {
+    background-color: rgb(var(--bs-primary-rgb));
+    color: #fff;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+    background-color: rgb(var(--bs-primary-rgb)) !important;
+    border-color: rgb(var(--bs-info-rgb)) !important;
+}
+.btn-secondary:hover {
+    background-color: rgb(139, 90, 60) !important;
+    border-color: rgb(var(--bs-info-rgb)) !important;
+}

@@ -1,0 +1,19 @@
+.navbar {
+    background-color: rgba(var(--bs-dark-rgb), 0);
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-pills .nav-link {
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.nav-pills .nav-link.active {
+  background-color: transparent !important;
+  border-color: var(--bs-primary-rgb);
+  color: var(--bs-primary-rgb) !important;
+}
