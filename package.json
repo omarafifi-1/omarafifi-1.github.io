@@ -6,10 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:PersonalPortfolio": "node dist/personal-portfolio/server/main.js",
-    "predeploy" : "ng build --configuration production --base-href=/personal-portfolio/ --ssr false",
-    "deploy" : "gh-pages -d dist/personal-portfolio"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
